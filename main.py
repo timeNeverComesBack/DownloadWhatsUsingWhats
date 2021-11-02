@@ -2,6 +2,9 @@ import re
 import pymysql
 from time import sleep
 
+import readPlainText as p
+import readExcel as e
+
 print("""
 
 
@@ -216,8 +219,8 @@ def methodEnterPoint(id, methodsArray):
             readMySQLConnectionFromText()
 
     elif methodsArray[id] == "Excel列表":
-        print("打开Excel文件……")
+        e.readExcel()
     elif methodsArray[id] == "TXT列表":
-        print("打开TXT文件……")
+        p.readPlainText()
 
 methodEnterPoint(inputMethodsArrayId(methodsArray), methodsArray)
